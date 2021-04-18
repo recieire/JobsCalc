@@ -1,0 +1,147 @@
+/* global remove user-agent styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* custom vars */
+:root {
+  --color-background: #f0f2f5;
+  --color-text: #fcfdff;
+
+  --color-primary: #41414c;
+  --color-secondary: #f1972c;
+  --color-secondary-hover: #fa9c2d;
+
+  --color-input-background: #f8f8fc;
+  --color-button-text: #ffffff;
+  --color-hairline-in-dark: #4f4f5b;
+  --color-hairline-in-light: #e1e3e5;
+
+  --color-card-background: var(--color-text);
+  --color-card-title: #5a5a66;
+  --color-card-label: #bfbfcc;
+  --color-card-content: #787880;
+
+  --color-cancel: #e1e3e5;
+  --color-delete: #eb3b35;
+  --color-save: #36b336;
+
+  --color-badge-progress-text: var(--color-save);
+  --color-badge-progress-background: #e8f8e8;
+  --color-badge-done-text: var(--color-delete);
+  --color-badge-done-background: #faeceb;
+
+  --color-header-inner-title: var(--color-card-label);
+}
+
+/* user-agent font-size is 16px, let's make it responsive */
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%; /* 15px */
+  }
+}
+
+@media (max-width: 970px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    font-size: 75%; /* 12px */
+  }
+}
+
+@media (max-width: 590px) {
+  :root {
+    font-size: 62.25%; /* 10px */
+  }
+}
+
+/* tags styling */
+body {
+  background: var(--color-background);
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1rem Inter;
+  color: var(--color-text);
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* basic classes */
+.container {
+  width: min(1440px, 90vw);
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--color-hairline-in-dark);
+  margin: 1rem 0;
+}
+
+.separator.light {
+  background-color: #e1e3e5;
+}
+
+.flex {
+  display: flex;
+}
+
+.footer-index {
+  font-size: 75%;
+  width: 250px;
+  margin: 0 auto;
+  margin-right: 0rem;
+  margin-top: 3rem;
+  color: var(--color-secondary);
+  margin-block-end: -30em;
+}
+
+.footer-job-edit {
+  font-size: 75%;
+  width: 250px;
+  margin: 0 auto;
+  color: var(--color-secondary);
+  margin-block-start: 20em;
+  margin-block-end: -30em;
+}
+
+.footer-job {
+  font-size: 75%;
+  width: 250px;
+  margin: 0 auto;
+  color: var(--color-secondary);
+  margin-block-start: 20em;
+  margin-block-end: -30em;
+}
+
+.footer-profile {
+  font-size: 75%;
+  margin-right: -4rem;
+  color: var(--color-secondary);
+  margin-block-start: 48em;
+}
